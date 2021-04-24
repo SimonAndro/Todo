@@ -26,7 +26,7 @@
             <a class="menu-icon" id="show-menu" href="#"><i class="fas fa-bars"></i></a>
             <div class="col-sm-2 left-side-menu" id="left-menu">
                 <div class="brand">
-                    <h3><?=$appName?></h3>
+                    <h3><?=getAppConfig('site-title')?></h3>
                     <a id="hide-menu" class="menu" href="#"> <i class="fas fa-bars"></i> </a>
                 </div>
 
