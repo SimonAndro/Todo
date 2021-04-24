@@ -18,11 +18,11 @@ class appRoutes implements \Ninja\Routes {
 	}
 
 	public function getRoutes(): array {
-        $userController = new \app\Controllers\User($this->usersTable);
+        $userController = new \app\Controllers\User($this->authentication,$this->usersTable);
 		$homeController = new \app\Controllers\Home($this->authentication,$this->usersTable,$this->projectsTable);
-        $projectController = new \app\Controllers\Project($this->usersTable,$this->tasksTable,$this->projectsTable);
-        $taskController = new \app\Controllers\Task($this->usersTable,$this->tasksTable,$this->projectsTable);
-        $dashboardController = new \app\Controllers\Dashboard($this->usersTable,$this->tasksTable,$this->projectsTable);
+        $projectController = new \app\Controllers\Project($this->authentication,$this->usersTable,$this->tasksTable,$this->projectsTable);
+        $taskController = new \app\Controllers\Task($this->authentication,$this->usersTable,$this->tasksTable,$this->projectsTable);
+        $dashboardController = new \app\Controllers\Dashboard($this->authentication,$this->usersTable,$this->tasksTable,$this->projectsTable);
 
 		$routes = [
 			'user-register' => [
@@ -39,11 +39,11 @@ class appRoutes implements \Ninja\Routes {
 			'user-login'=>[
 				'GET'=>[
 					'controller'=> $userController,
-					'action'=>'index'
+					'action'=>'login'
 				],
 				'POST'=>[
 					'controller'=> $userController,
-					'action'=>'login'
+					'action'=>'loginPost'
                 ],
                 'login' => false
 			],
@@ -59,7 +59,7 @@ class appRoutes implements \Ninja\Routes {
 					'controller' => $homeController,
 					'action' => 'index'
 				],
-				'login' => false
+				'login' => true
 			],
 			'project' => [
 				'GET' => [

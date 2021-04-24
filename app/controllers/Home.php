@@ -6,6 +6,7 @@ use \Ninja\Authentication;
 class Home {
 	private $usersTable;
     private $projectsTable;
+	private $authentication;
 
 	public function __construct(Authentication $authentication, DatabaseTable $usersTable, DatabaseTable $projectsTable) {
 		$this->authentication = $authentication;
@@ -19,7 +20,10 @@ class Home {
 	 */
 	public function index() {
 		$title = "Home";
-		$pageContent = loadTemplate("home/index");
+
+		$sql = "SELECT name FROM ".$this->projectsTable->getTableName()." WHERE owner_id=?";
+		$projects = $this->projectsTable->customQuery($sql,$user->getUserId());
+		$pageContent = loadTemplate("home/index",['projects'=>$projects]);
 		return [
 			'title'=>$title,
 			'pageContent'=>$pageContent

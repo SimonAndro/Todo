@@ -8,7 +8,8 @@ class Dashboard {
     private $tasksTable;
     private $projectsTable;
 
-	public function __construct(DatabaseTable $usersTable,DatabaseTable $tasksTable,DatabaseTable $projectsTable) {
+	public function __construct(Authentication $authentication, DatabaseTable $usersTable,DatabaseTable $tasksTable,DatabaseTable $projectsTable) {
+		$this->authentication = $authentication;
 		$this->usersTable = $usersTable;
         $this->tasksTable = $tasksTable;
         $this->projectsTable = $projectsTable;
