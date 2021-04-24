@@ -8,7 +8,8 @@ class Project {
     private $tasksTable;
     private $projectsTable;
 
-	public function __construct(DatabaseTable $usersTable,DatabaseTable $tasksTable,DatabaseTable $projectsTable) {
+	public function __construct(Authentication $authentication, DatabaseTable $usersTable,DatabaseTable $tasksTable,DatabaseTable $projectsTable) {
+		$this->authentication = $authentication;
 		$this->usersTable = $usersTable;
         $this->tasksTable = $tasksTable;
         $this->projectsTable = $projectsTable;
@@ -23,7 +24,18 @@ class Project {
 
     public function projectPost()
     {
-		\dump_to_file($_POST);
-        return "projectPost";
+		if($val = $_POST['val'])
+		{
+			if($name = $val['projectName'])
+			{
+				$project['owner_id'] = $
+				$project['name'] = $name;
+				$project['created_at'] = time();
+				$projectsTable->save($project);
+			}
+			return [
+				'ajaxResponse'=>$val['ajax']
+			];
+		}  
     }
 }

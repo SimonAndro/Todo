@@ -39,7 +39,7 @@ class EntryPoint {
 			$page = $controller->$action();
 			$output = $page;
 
-			if(isset($page['ajaxResponse']))
+			if(isset($page['ajaxResponse']) && $page['ajaxResponse'])
 			{
 				$output = json_encode($output);
 				header('Content-Type: application/json');

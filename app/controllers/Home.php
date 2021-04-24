@@ -6,6 +6,7 @@ use \Ninja\Authentication;
 class Home {
 	private $usersTable;
     private $projectsTable;
+	private $authentication;
 
 	public function __construct(Authentication $authentication, DatabaseTable $usersTable, DatabaseTable $projectsTable) {
 		$this->authentication = $authentication;
