@@ -1,0 +1,10 @@
+.project-menu{
+    display: flex;
+    
+}
+.todo-container{
+    display: flex;
+    background-color: #c4c4c4;
+    padding: 4px;
+    height: 100;
+}

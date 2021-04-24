@@ -31,3 +31,4 @@ catch (PDOException $e) {
 
 	include  __DIR__ . '/app/views/error/index.html.php';
 }
+
