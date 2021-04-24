@@ -333,5 +333,5 @@ ASALocalRun/
 # Local History for Visual Studio
 .localhistory/
 debug!.txt
-config.php
 ftpInfo.txt
+app_config!production!.php
