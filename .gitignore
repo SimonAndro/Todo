@@ -335,3 +335,4 @@ ASALocalRun/
 debug!.txt
 ftpInfo.txt
 app_config!production!.php
+dbInfo.txt
