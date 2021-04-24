@@ -11,7 +11,7 @@
     <div class="login-layout">
         <h2>Login Form</h2>
 
-        <form action="/action_page.php" method="post">
+        <form action="user-login" method="post">
             <div class="imgcontainer">
                 <img src="<?=loadAsset("media/img_login_avatar.png")?>" alt="Avatar" class="avatar">
             </div>
@@ -24,9 +24,12 @@
                 <input type="password" placeholder="Enter Password" name="psw" required>
 
                 <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
+                <div class="rem-reg">
+                    <label class="">
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <a href="user-register" class="reg-btn">Create Account</a>
+                </div>
             </div>
 
             <div class="container" style="background-color:#f1f1f1">

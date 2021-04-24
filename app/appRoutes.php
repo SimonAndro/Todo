@@ -28,11 +28,11 @@ class appRoutes implements \Ninja\Routes {
 			'user-register' => [
 				'GET' => [
 					'controller' => $userController,
-					'action' => 'index'
+					'action' => 'register'
 				],
 				'POST' => [
 					'controller' => $userController,
-					'action' => 'register'
+					'action' => 'registerPost'
                 ],
                 'login' => false
 			],
