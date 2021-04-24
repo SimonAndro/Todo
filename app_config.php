@@ -16,5 +16,5 @@ return array(
      * Site information
      */
     'site-title'=>'Todo',
-    'base-url'=>'http://localhost/todo/' 
+    'base-url'=>'http://localhost/Todo/' 
 );

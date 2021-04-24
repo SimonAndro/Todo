@@ -26,7 +26,7 @@ class EntryPoint {
 
 		$authentication = $this->routes->getAuthentication();
 
-		if (isset($routes[$this->route]['login']) && !$authentication->isLoggedIn()) {
+		if (isset($routes[$this->route]['login']) && ($routes[$this->route]['login']) && !$authentication->isLoggedIn()) {
 			header('location: login');
 		}
 		else if (isset($routes[$this->route]['permissions']) && !$this->routes->checkPermission($routes[$this->route]['permissions'])) {
@@ -49,42 +49,16 @@ class EntryPoint {
 				}
 			}
 
-			if(isset($page['wrapper']))
+			if(isset($page['ajaxResponse']))
 			{
-				
-				if(!$page['wrapper'])
-				{
-			
-					$output = $output==''?$page:$output;
-					unset($output['wrapper']);
+				$output = $output==''?$page:$output;
+				$output = json_encode($output);
+				header('Content-Type: application/json');
+				return $output;
+			}	
 
-					if(isset($output["noAjax"]))
-					{
-						if($output["noAjax"])
-						{
-							echo $output[0];
-							return;
-						}
-					}
-					$output = json_encode($output);
-					header('Content-Type: application/json');
-					echo $output;
-  
-					return;
-				}
-			}
-
-
-			$reg = false;
-			if($_SESSION['reg'])
-			{
-				$reg = true;
-			}
-
-			
-
+			$output = $output==''?$page:$output;
 			echo loadTemplate('layout/layout.html.php', ['user' => $authentication->getUser(),
-														 'reg' => $reg,
 			                                             'output' => $output,
 			                                            ]);
 
