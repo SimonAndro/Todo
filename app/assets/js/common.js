@@ -16,3 +16,37 @@ $(document).ready(function(){
         $(".menu-icon").hide()
     })
 })
+
+function ajaxHandler(url,type,data)
+{
+    $('#loading-overlay').show();
+    $.ajax({
+        type: type,
+        url: url, 
+        data: data,
+        success:function(result){
+            $('#loading-overlay').hide(); 
+
+
+        },
+        error:function(result)
+        {
+            $('#loading-overlay').hide(); 
+        }
+    });
+}
+
+$(".general-form").on("submit",function(e)
+{
+    e.preventDefault();
+    $('.modal').click(); // remove any open modals
+
+    var form = $(e.currentTarget);
+
+    //todo: validate form before submit
+
+    var url = $(this).attr('data-url');
+    var type = "POST";
+    var data = form.serialize();
+    ajaxHandler(url,type,data);
+})

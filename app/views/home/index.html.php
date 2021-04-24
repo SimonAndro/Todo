@@ -25,17 +25,18 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+                            <form action="" method="POST" class="general-form">
                             <div class="modal-body">
-                                <form action="" method="POST">
+                               
                                     <label for="projectName">Project Name</label>
                                     <input type="text" class="form-control" name="projectName" id="projectName"
                                         placeholder="Eg. School">
-                                </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-success">Create Project</button>
+                                <button type="submit" class="btn btn-success"  >Create Project</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div> <!-- Modal -->

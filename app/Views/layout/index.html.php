@@ -52,6 +52,10 @@
         </div> <!--Row -->
     </div> <!-- Container fluid -->
 
+    <div id="loading-overlay" style="display:none;">
+        <div class="spinner">
+        </div>
+    </div>
 
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
