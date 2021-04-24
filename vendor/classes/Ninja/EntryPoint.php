@@ -37,30 +37,19 @@ class EntryPoint {
 			$action = $routes[$this->route][$this->method]['action'];
 
 			$page = $controller->$action();
-			$output = '';
-			
-			if(isset($page['template']))
-			{
-				if (isset($page['variables'])) {
-					$output = loadTemplate($page['template'], $page['variables']);
-				}
-				else {
-					$output = loadTemplate($page['template']);
-				}
-			}
+			$output = $page;
 
 			if(isset($page['ajaxResponse']))
 			{
-				$output = $output==''?$page:$output;
 				$output = json_encode($output);
 				header('Content-Type: application/json');
 				return $output;
 			}	
-
-			$output = $output==''?$page:$output;
-			echo loadTemplate('layout/layout.html.php', ['user' => $authentication->getUser(),
-			                                             'output' => $output,
-			                                            ]);
+	
+			echo loadTemplate('layout/index', [
+									'user' => $authentication->getUser(),
+									'output' => $output,
+			                         ]);
 
 		}
 

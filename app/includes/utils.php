@@ -47,7 +47,7 @@ function loadTemplate($templateFileName, $variables = []) {
     $baseUrl = getAppConfig('base-url');
 
     ob_start();
-    include  path('/app/views/').$templateFileName;
+    include  path('/app/Views/').$templateFileName.".html.php";
 
     return ob_get_clean();
 }
