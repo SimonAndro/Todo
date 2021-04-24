@@ -5,7 +5,7 @@ try {
 
 	define("APP_BASE_PATH", __DIR__);
 
-	getAppConfig('site-title');
+	$appName = getAppConfig('site-title');
 
 	$request = $_SERVER['REQUEST_URI'];
 

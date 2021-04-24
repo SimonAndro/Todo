@@ -11,13 +11,19 @@ class Home {
 		$this->authentication = $authentication;
 		$this->usersTable = $usersTable;
 		$this->projectsTable = $projectsTable;
+
 	}
 
 	/***
 	 * index page for home route
 	 */
 	public function index() {
-		return "home controller";
+		$title = "Home";
+		$pageContent = loadTemplate("home/index");
+		return [
+			'title'=>$title,
+			'pageContent'=>$pageContent
+		];
 	}
 
 }
