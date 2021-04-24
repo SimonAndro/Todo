@@ -23,6 +23,7 @@ class Project {
 
     public function projectPost()
     {
+		\dump_to_file($_POST);
         return "projectPost";
     }
 }

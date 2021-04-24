@@ -25,12 +25,13 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form action="" method="POST" class="general-form">
+                            <form action="project" method="POST" class="general-form">
                             <div class="modal-body">
                                
                                     <label for="projectName">Project Name</label>
-                                    <input type="text" class="form-control" name="projectName" id="projectName"
+                                    <input type="text" class="form-control" name="val[projectName]" value="" id="projectName"
                                         placeholder="Eg. School">
+                                    <input type="hidden" name="val[ajax]" value="true" />
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>

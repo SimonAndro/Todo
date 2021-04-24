@@ -26,12 +26,13 @@ function ajaxHandler(url,type,data)
         data: data,
         success:function(result){
             $('#loading-overlay').hide(); 
-
+            console.log(result);
 
         },
         error:function(result)
         {
             $('#loading-overlay').hide(); 
+            console.log(result);
         }
     });
 }
@@ -45,7 +46,7 @@ $(".general-form").on("submit",function(e)
 
     //todo: validate form before submit
 
-    var url = $(this).attr('data-url');
+    var url = $(this).attr('action');
     var type = "POST";
     var data = form.serialize();
     ajaxHandler(url,type,data);
