@@ -37,8 +37,7 @@ function ajaxHandler(url,type,data)
     });
 }
 
-$(".general-form").on("submit",function(e)
-{
+$(".general-form").on("submit",function(e){
     e.preventDefault();
     $('.modal').click(); // remove any open modals
 
@@ -50,4 +49,4 @@ $(".general-form").on("submit",function(e)
     var type = "POST";
     var data = form.serialize();
     ajaxHandler(url,type,data);
-})
+});
