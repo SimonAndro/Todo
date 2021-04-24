@@ -15,6 +15,21 @@ $(document).ready(function(){
         $(".menu-icon").removeClass("col-sm-1")
         $(".menu-icon").hide()
     })
+
+    $("#add-todo").click(function(){
+        $("#todo-form").toggle()
+    })
+
+    $("#add-doing").click(function(){
+        $("#doing-form").toggle()
+    })
+
+    $("#add-done").click(function(){
+        $("#done-form").toggle()
+    })
+    $(".task").click(function(){
+        $("#task-info").show()
+    })
 })
 
 function ajaxHandler(url,type,data)

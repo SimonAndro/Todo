@@ -12,25 +12,25 @@
       color: #111;
       font-size: 25px;
   }
+  .brand .menu{
+      font-size: 25px;
+  }
+  .left-side-menu ul{
+      margin-top: 100px;
+  }
   .left-side-menu ul li{
       list-style: none;
+      padding: 4px;
   }
   .left-side-menu ul li:hover{
       background-color: #4b4b4bcc;
-      padding: 4px;
   }
   .left-side-menu a{
       text-decoration: none;
       color: #fff;
   }
-  .brand{
-      display: flex;
-      padding: 5px;
-      width: 100%;
-  }
-  .brand .menu{
-    margin-left: 130px;
-  }
+ 
+  
   .right-side{
    
   }

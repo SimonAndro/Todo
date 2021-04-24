@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo | Home</title>
+    <title>Todo | Title </title> 
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
      <!-- Font awesome -->
@@ -19,8 +19,15 @@
         <a class="menu-icon" id="show-menu" href="#"><i class="fas fa-bars"></i></a>
         <div class="col-sm-2 left-side-menu" id="left-menu">
             <div class="brand">
-                <h3>Todo</h3>
-                <a id="hide-menu" class="menu" href="#"> <i class="fas fa-bars"></i> </a>
+                <div class="row">
+                    <div class="col-10">
+                        <h4>Todo</h4>
+                    </div>
+                    <div class="col-2">
+                        <a id="hide-menu" class="menu" href="#"> <i class="fas fa-bars"></i> </a>
+                    </div>
+                </div>
+                
             </div>
             
                 <ul>
@@ -38,17 +45,127 @@
                </div>
             </div> <!-- Home head row-->
             <hr>
-           <div class="project-menu">
-             <a href="#">Board</a> <a href="#">Dashboard</a>
-             <hr>
-           </div>
-           <div class="todo-container">
-              <div class="todo">
-                  <p>Todo</p>
-              </div>
-              <div class="todo"></div>
-           </div>
-      </div> <!-- Right side Area-->
+            
+            <div class="container">
+                <div class="project-menu">
+                    <a href="#">Board</a> <a href="#">Dashboard</a>
+                    <hr>
+                </div>
+                  <div class="task-container">
+
+                       <!-- Todo tasks -->
+                     <div class="tasks-box">
+                         <div class="row">
+                             <div class="col-sm-8">
+                                 <p>Todo</p>
+                             </div>
+                             <div class="col-sm-4">
+                                <a id="add-todo" href="#"><i class="fas fa-plus"></i></a>
+                             </div>
+                         </div>
+                         <div class="add-task" id="todo-form">
+                             <form action="">
+                                <i class="far fa-check-circle"></i> <input type="text" class="form-control" id="taskname">
+                                 <button type="submit" name="add" class="btn">add</button>
+                             </form>
+                         </div> <!-- Task form-->
+
+                         <div class="task" id="task">
+                            <p><i class="far fa-check-circle"></i> Dashboard layout</p>
+                        </div>
+                        <div class="task" id="task">
+                            <p><i class="far fa-check-circle"></i> User login and sign up</p>
+                        </div>
+                     </div> <!-- Todo tasks -->
+
+                     <!-- Doing Tasks-->
+                     <div class="tasks-box">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <p>Doing</p>
+                            </div>
+                            <div class="col-sm-4">
+                               <a id="add-doing" href="#"><i class="fas fa-plus"> </i></a>
+                            </div>
+                        </div>
+
+                        <div class="add-task" id="doing-form">
+                            <form action="">
+                               <i class="far fa-check-circle"></i> <input type="text" class="form-control" id="taskname">
+                                <button type="submit" name="add" class="btn">add</button>
+                            </form>
+                        </div> <!-- Task form-->
+
+                         <div class="task" id="task">
+                             <p><i class="far fa-check-circle"></i> Home page layout being added</p>
+                         </div>
+                     </div><!-- Doing Tasks-->
+
+                     <!-- Done tasks -->
+                     <div class="tasks-box">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <p>Done</p>
+                            </div>
+                            <div class="col-sm-4">
+                               <a id="add-done" href="#"><i class="fas fa-plus"> </i></a>
+                            </div>
+                        </div>
+                            <div class="add-task" id="done-form">
+                                <form action="">
+                                   <i class="far fa-check-circle"></i> <input type="text" class="form-control" id="taskname">
+                                    <button type="submit" name="add" class="btn">add</button>
+                                </form>
+                            </div> <!-- Task form-->
+                            <div class="task" id="task">
+                                <p><i class="far fa-check-circle"></i> First version layout</p>
+                            </div>
+                     </div> <!--Done tasks-->
+
+                  </div> <!--Todo container-->
+            </div> <!-- container-->
+
+            <!-- Task information  from side-->
+            <div class="task-info" id="task-info">
+                <h5>Project name</h5>
+                <div class="task-detail">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p>Assignee</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p>Person Assigned</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                       <div class="col-sm-3">
+                           <p>Due date:</p>
+                       </div>
+                       <div class="col-sm-9">
+                           <p>Date</p>
+                       </div>
+                   </div>
+                   <div class="row">
+                       <div class="col-sm-3">
+                           <p>Project:</p>
+                       </div>
+                       <div class="col-sm-9">
+                           <p>Project name</p>
+                       </div>
+                   </div>
+                   <div class="row">
+                       <div class="col-sm-3">
+                           <p>Description:</p>
+                       </div>
+                       <div class="col-sm-9">
+                           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus suscipit nisi voluptas! Autem, eum quos! Beatae aspernatur, inventore harum earum autem iusto voluptatum error eum. Sint voluptatem quia minus adipisci!</p>
+                       </div>
+                   </div>
+                </div>
+                <a href="#"><i class="fas fa-plus"></i> Add task</a>
+            </div> <!-- Task information -->
+
+       </div> <!-- Right side Area-->
      </div> <!--Row -->
     
  </div>
@@ -61,7 +178,7 @@
 
 <!-- Jquery -->
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<!-- Commons js file -->
+<!-- Common js file -->
 <script src="../../assets/js/common.js"></script>
 </body>
 </html>
