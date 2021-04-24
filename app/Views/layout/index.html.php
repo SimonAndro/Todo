@@ -26,8 +26,14 @@
             <a class="menu-icon" id="show-menu" href="#"><i class="fas fa-bars"></i></a>
             <div class="col-sm-2 left-side-menu" id="left-menu">
                 <div class="brand">
-                    <h3><?=getAppConfig('site-title')?></h3>
-                    <a id="hide-menu" class="menu" href="#"> <i class="fas fa-bars"></i> </a>
+                    <div class="row">
+                        <div class="col-10">
+                        <h3><?=getAppConfig('site-title')?></h3>
+                        </div>
+                        <div class="col-2">
+                        <a id="hide-menu" class="menu" href="#"> <i class="fas fa-bars"></i> </a>
+                        </div>
+                    </div>
                 </div>
 
                 <ul>
