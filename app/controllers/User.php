@@ -15,11 +15,27 @@ class User {
 	 * index page for home route
 	 */
 	public function index() {
-		return "user login form";
+
+		return "user info";
 	}
 
     public function login(){
-        return "login form submission";
+		return loadTemplate("user/login");
     }
+
+	public function loginPost()
+	{
+		if($val = $_POST['val'])
+		{
+			$username = $val['username'];
+			$password = $val['password'];
+
+			if($this->authentication->login($username, $password))
+			{
+				header("Location: home");
+			}
+		}
+		
+	}
 
 }

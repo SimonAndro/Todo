@@ -20,11 +20,6 @@ class Home {
 	 */
 	public function index() {
 		$title = "Home";
-		
-		if(!($user = $this->authentication->getUser()))
-		{
-			header('Location: login');
-		}
 
 		$sql = "SELECT name FROM ".$this->projectsTable->getTableName()." WHERE owner_id=?";
 		$projects = $this->projectsTable->customQuery($sql,$user->getUserId());

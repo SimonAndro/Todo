@@ -27,7 +27,7 @@ class EntryPoint {
 		$authentication = $this->routes->getAuthentication();
 
 		if (isset($routes[$this->route]['login']) && ($routes[$this->route]['login']) && !$authentication->isLoggedIn()) {
-			header('location: login');
+			header('location: user-login');
 		}
 		else if (isset($routes[$this->route]['permissions']) && !$this->routes->checkPermission($routes[$this->route]['permissions'])) {
 			header('location: login-permissionserror');	
@@ -45,6 +45,13 @@ class EntryPoint {
 				header('Content-Type: application/json');
 				return $output;
 			}	
+
+		
+			if(!$authentication->isLoggedIn())
+			{
+				echo $output;
+				die();
+			}
 	
 			echo loadTemplate('layout/index', [
 									'user' => $authentication->getUser(),

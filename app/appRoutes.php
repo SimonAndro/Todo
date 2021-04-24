@@ -39,11 +39,11 @@ class appRoutes implements \Ninja\Routes {
 			'user-login'=>[
 				'GET'=>[
 					'controller'=> $userController,
-					'action'=>'index'
+					'action'=>'login'
 				],
 				'POST'=>[
 					'controller'=> $userController,
-					'action'=>'login'
+					'action'=>'loginPost'
                 ],
                 'login' => false
 			],
@@ -59,7 +59,7 @@ class appRoutes implements \Ninja\Routes {
 					'controller' => $homeController,
 					'action' => 'index'
 				],
-				'login' => false
+				'login' => true
 			],
 			'project' => [
 				'GET' => [
