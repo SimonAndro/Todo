@@ -26,16 +26,23 @@ class Project {
     {
 		if($val = $_POST['val'])
 		{
-			if($name = $val['projectName'])
+			if(($name = $val['projectName']) && ($user = $this->authentication->getUser()) )
 			{
-				$project['owner_id'] = $
+				$project['owner_id'] = $user->getUserId();
 				$project['name'] = $name;
 				$project['created_at'] = time();
 				$projectsTable->save($project);
 			}
+
+			$pageContent = loadTemplate("home/index");
 			return [
+				'pageContent'=> $pageContent,
 				'ajaxResponse'=>$val['ajax']
 			];
-		}  
+		} 
+		return [
+			'msg'=>'unknown',
+			'ajaxResponse'=>$val['ajax']
+		]; 
     }
 }

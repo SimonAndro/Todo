@@ -25,4 +25,9 @@ class Project{
 		return $this->name;
 	}
 
+	public function getUserProjects($userId)
+	{
+		
+	}
+
 }

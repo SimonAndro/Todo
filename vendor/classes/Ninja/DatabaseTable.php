@@ -20,8 +20,8 @@ class DatabaseTable {
 		$query = $this->pdo->prepare($sql);
 		$query->execute($parameters);
 		return $query;
-	}	
-
+	}
+	
 	public function total($field = null, $value = null) {
 		$sql = 'SELECT COUNT(*) FROM `' . $this->table . '`';
 		$parameters = [];
@@ -48,71 +48,12 @@ class DatabaseTable {
 		return $query->fetchObject($this->className, $this->constructorArgs);
 	}
 
-	public function find($conditions=[], $orderBy = null, $limit = null, $offset = null) {
-		$query = 'SELECT * FROM ' . $this->table . ' WHERE ';
+	public function find($column, $value, $orderBy = null, $limit = null, $offset = null) {
+		$query = 'SELECT * FROM ' . $this->table . ' WHERE ' . $column . ' = :value';
 
-		// $constraint = [
-		// 	'joint'=>"OR",
-		// 	'column'=>"column",
-		// 	'match'=>"=",
-		// 	'value'=>"value"
-		// ];
-  
-		
-		$valueCount = 1;
-		$jointIN = false;
-		foreach($conditions  as $condition )
-		{
-			extract($condition);
-			if(isset($joint))
-			{
-				$query.=$joint." ";
-				unset($joint);
-			}
-
-			if(isset($open_brackets))
-			{
-				
-				for($b = 0; $b < $open_brackets; $b++)
-				{
-					$query.=" ( ";
-				}
-				unset($open_brackets);
-			}
-			
-			
-			if($match == "IN")
-			{
-				$place = ' (';
-				foreach( $value as $item)
-				{
-					$place .= ":value".$valueCount;
-					$parameters[":value".$valueCount] = $item;
-					$place .= ",";
-					$valueCount++;
-				}
-				$place = trim($place,",").') ';
-				$query.=$column.$match.$place." ";
-			}else{
-
-				$place  = "value".$valueCount;
-				$query .= $column.$match." :".$place." ";
-				
-				$parameters[$place] = $value;
-				$valueCount++;
-			}
-
-		
-			if(isset($close_brackets))
-			{
-				for($b = 0; $b < $close_brackets; $b++)
-				{
-					$query.=" ) ";
-				}
-				unset($close_brackets);
-			}
-					
-		}
+		$parameters = [
+			'value' => $value
+		];
 
 		if ($orderBy != null) {
 			$query .= ' ORDER BY ' . $orderBy;
@@ -125,15 +66,22 @@ class DatabaseTable {
 		if ($offset != null) {
 			$query .= ' OFFSET ' . $offset;
 		}
-  
+
 		$query = $this->query($query, $parameters);
-		
+
 		return $query->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
 	}
 
-	public function customQuery($sql,$parameters)
+	public function customQuery($sql)
 	{
-		$query = $this->query($sql,$parameters);
+		$args = func_get_args();
+        array_shift($args);
+
+        if (isset($args[0]) and is_array($args[0])) {
+            $args = $args[0];
+        }
+
+		$query = $this->query($sql, $args);
 		return $query->fetchAll(\PDO::FETCH_CLASS, $this->className, $this->constructorArgs);
 	}
 
@@ -255,5 +203,10 @@ class DatabaseTable {
 		}
 
 		return $entity;	
+	}
+
+	public function getTableName()
+	{
+		return $this->table;
 	}
 }
