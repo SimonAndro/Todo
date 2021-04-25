@@ -110,3 +110,13 @@
       height: 100%;
       background-color:rgba(211,211,211,.15);;
   }
+
+.user-icon{
+  border: 1px solid #ccc;
+  margin:10px;
+  padding:5px;
+  width:100px;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -60,3 +60,7 @@ body {
     background-color: #f1f1f1;
     text-align: center;
   }
+
+  .reg-error{
+    color:red;
+  }

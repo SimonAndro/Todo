@@ -52,7 +52,11 @@ class appRoutes implements \Ninja\Routes {
 					'controller'=> $userController,
 					'action'=>'logout'
                 ],
-                'login' => false
+				'GET'=>[
+					'controller'=> $userController,
+					'action'=>'logout'
+                ],
+                'login' => true
 			],
 			'home' => [
 				'GET' => [
@@ -70,7 +74,7 @@ class appRoutes implements \Ninja\Routes {
 					'controller' => $projectController,
 					'action' => 'projectPost'
 				],
-				'login' => false
+				'login' => true
 			],
 			'task'=>[
 				'GET' => [
@@ -81,14 +85,14 @@ class appRoutes implements \Ninja\Routes {
 					'controller' => $taskController,
 					'action' => 'taskPost'
 				],
-				'login' => false
+				'login' => true
 			],
 			'dashboard' => [
 				'GET' => [
 					'controller' => $dashboardController,
 					'action' => 'index'
 				],
-				'login' => false
+				'login' => true
 			]
 		];
 
