@@ -1,3 +1,6 @@
+
+## Project Idea
+This is a  clone project for a simplified version of a web app called [Asana](https://app.asana.com/), please visit  [Asana](https://app.asana.com/) for an idea of what this project is about. The project is inspired to allow interested contributors to practice their web developement skills.
 ## How to contribute
 To Contribute to the project,
 ##### 1. Begin by forking your own copy of this repository to your account, [how to fork a repository](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).
