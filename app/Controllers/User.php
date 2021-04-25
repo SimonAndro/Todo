@@ -38,4 +38,9 @@ class User {
 		
 	}
 
+	public function register()
+	{
+		return loadTemplate("user/register");
+	}
+
 }
