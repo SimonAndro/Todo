@@ -1,7 +1,3 @@
-## Todo
-### Task creation and management app, visit at [Todo](http://todo.saharani.com)
-
-[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
 
 ## Project Idea
 This is a  clone project for a simplified version of a web app called [Asana](https://app.asana.com/), please visit  [Asana](https://app.asana.com/) for an idea of what this project is about. The project is inspired to allow interested contributors to practice their web developement skills.

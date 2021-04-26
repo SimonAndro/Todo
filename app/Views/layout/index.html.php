@@ -1,5 +1,5 @@
 <?php
-//\dump_to_file($output);
+dump_to_file($output);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,8 +46,8 @@
                 <div class="home-head">
                     <h2><?=$output['title']?></h2>
                     <div class="user-info">
-                        <p> User name</p>
-                        <a href="javascript:void(0);">Logout</a>
+                        <p class="user-icon"><?=$user->getUserEmail()?></p>
+                        <a class="btn btn-secondary" href="user-logout">Logout</a>
                     </div>
                 </div> <!-- Home head-->
                 <hr>

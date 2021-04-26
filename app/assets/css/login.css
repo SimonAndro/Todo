@@ -36,10 +36,10 @@ button:hover {
     opacity: 0.8;
 }
 
-.cancelbtn {
+.other-login {
     width: auto;
     padding: 10px 18px;
-    background-color: #f44336;
+    background-color: #36bef4;
 }
 
 .imgcontainer {
@@ -85,3 +85,11 @@ span.psw {
 a {
     color: dodgerblue;
 }
+
+.login-msg{
+    text-align: center;
+}
+
+.log-error{
+    color:red;
+ }
