@@ -9,7 +9,7 @@
 <body>
 
     <div class="login-layout">
-        <h2>ToDo Login</h2>
+        <h2>  ToDo Login</h2>
         <?php if(isset($message)): ?>
         <div class="login-msg"> <p><?=$message?> </p></div>
         <?php endif ?>
@@ -20,7 +20,7 @@
             <div class="imgcontainer">
                 <img src="<?=loadAsset("media/img_login_avatar.png")?>" alt="Avatar" class="avatar">
             </div>
-
+            
             <div class="container">
                 <label for="uname"><b>Email</b></label>
                 <input type="text" placeholder="Enter Username" name="val[email]" required>
