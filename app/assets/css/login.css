@@ -6,7 +6,7 @@ body {
  .login-layout
 {
     display: block;
-    width:30%;
+    width: 30%;
     margin: 100px auto auto auto;
     height: 100%;
     background-color: #fff;
@@ -84,6 +84,20 @@ span.psw {
 
     .cancelbtn {
         width: 100%;
+    }
+    .login-layout{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .login-layout{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .login-layout{
+        width: 95%;
     }
 }
 .rem-reg
