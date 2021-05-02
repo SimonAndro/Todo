@@ -42,9 +42,8 @@ a{
 
 .task-info{
     display: none;
-    position: relative;
     float: right;
-    right: 0px;
+    right: 0;
     width: 500px;
     background-color: #fff;
     z-index: 2;
@@ -52,4 +51,7 @@ a{
     border-radius: 10px;
     border: solid 1px #eeeeee;
     box-shadow: 6px 6px 6px 6px #eeeeee;
+}
+.task-info .fa-arrow-right{
+    font-size: 22px;
 }

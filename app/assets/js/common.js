@@ -27,8 +27,13 @@ $(document).ready(function(){
     $("#add-done").click(function(){
         $("#done-form").toggle()
     })
+
     $(".task").click(function(){
-        $("#task-info").show()
+        $("#task-info").show(50)
+    })
+
+    $("#arrow-rght").click(function(){
+        $("#task-info").hide(50)
     })
 })
 
