@@ -19,7 +19,13 @@ class Project {
 	 * index page for home route
 	 */
 	public function index() {
-		return "project controller";
+		$title = "Project";
+
+		$pageContent = loadTemplate("project/index");
+		return [
+			'title'=>$title,
+			'pageContent'=>$pageContent
+		];
 	}
 
     public function projectPost()
