@@ -18,6 +18,7 @@ dump_to_file($output);
         crossorigin="anonymous" />
     <!-- Custom Css -->
     <link rel="stylesheet" href="<?=loadAsset("css/common.css")?>">
+    <link rel="stylesheet" href="<?=loadAsset("css/project.css")?>">
 </head>
 
 <body>
