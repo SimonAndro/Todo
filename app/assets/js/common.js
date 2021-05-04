@@ -27,9 +27,20 @@ $(document).ready(function(){
     $("#add-done").click(function(){
         $("#done-form").toggle()
     })
+
     $(".task").click(function(){
         $("#task-info").show()
     })
+
+    $("#arrow-right").click(function(){
+        $("#task-info").hide()
+    })
+   $("#recent-task").click(function(){
+       $("#task-list").toggle();
+   })
+   $("#recent-project").click(function(){
+    $("#project-list").toggle();
+})
 })
 
 function notify(msg,type)
