@@ -127,9 +127,10 @@
 }
 
 .project-list .new-pro p{
-   /* width: 100px;
+   width: 100px;
+   line-height: 20px;
   text-overflow: ellipsis; 
-  border-radius: 6px; */
+  height: 45px;;
 }
 
 .logout-btn{
