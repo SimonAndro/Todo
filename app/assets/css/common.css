@@ -43,11 +43,13 @@
   }
   
   .tasks-container{
-    width: 80%; 
+    width: 90%; 
     display: block;
     margin: 0 auto;
   }
-  .tasks-container #due-soon{
+#recent-project,
+#recent-task{
+      font-size: 20px;
       border-bottom: solid 1px #7e7c7c;
   }
   .tasks-container .new-project{
@@ -117,6 +119,7 @@
   /* white-space: nowrap; 
   overflow: hidden;
   text-overflow: ellipsis; */
+  border-radius: 6px;
 }
 
 .logout-btn{

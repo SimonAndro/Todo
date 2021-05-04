@@ -2,20 +2,41 @@ a{
     text-decoration: none;
     color: inherit;
 }
+a:hover{
+    text-decoration: none;
+}
+.project-container{
+    background-color: #eeeeee;
+    padding: 20px;
+}
 .project-menu{
     display: flex;
-    
+    width: 100%;
+    border-bottom: 1px solid #111;
+    margin-bottom: 10px;
+}
+.project-menu .pro-nav{
+    display: block;
+    font-size: 20px;
+    margin-left: 20px;
+    border-radius: 6px;
+    padding: 4px;
+}
+.project-menu .pro-nav:hover{
+   background-color: #eeeeee;  
+   color: #111; 
 }
 .task-container{
     display: flex;
-    background-color: #eeeeee;
-    padding: 10px;
-    border-radius: 6px;
-    justify-content: left;
+    /* background-color: #eeeeee;
+    padding: 20px;
+    border-radius: 6px; */
 }
 .tasks-box{
-  width: 70%;
-  padding-right: 50px;
+  width: 350px;
+  padding: 20px;
+  border-right: 1px solid #cccc;
+
 }
 .add-task{
     display: none;

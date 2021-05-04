@@ -37,20 +37,24 @@
 
         <div class="col-sm-10 right-side">
             <!--  -->
-              <div class="home-head">
-                  <p>Your Project name</p>
-               <div class="user-info">
-                    <p> User name</p>
-                    <a href="#" >Logout</a>
-               </div>
+              <div class="home-head row">
+                  <div class="col-sm-8">
+                    <p>Your Project name</p>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="user-info">
+                        <p class="user-icon"> User name</p>
+                        <a class="logout-btn" href="#" >Logout</a>
+                   </div>
+                  </div>
+              
             </div> <!-- Home head row-->
             <hr>
-            
-            <div class="container">
-                <div class="project-menu">
-                    <a href="#">Board</a> <a href="#">Dashboard</a>
-                    <hr>
-                </div>
+            <div class="project-menu">
+                <a class="pro-nav" href="#">Board</a> <a class="pro-nav" href="#">Dashboard</a>
+                
+            </div>
+            <div class="project-container">
                   <div class="task-container">
 
                        <!-- Todo tasks -->
@@ -121,13 +125,21 @@
                                 <p><i class="far fa-check-circle"></i> First version layout</p>
                             </div>
                      </div> <!--Done tasks-->
-
+                     
                   </div> <!--Todo container-->
             </div> <!-- container-->
 
             <!-- Task information  from side-->
             <div class="task-info" id="task-info">
-                <h5>Project name</h5>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <h5>Project name</h5>
+                    </div>
+                    <div class="col-sm-3">
+                        <a id="arrow-right" href="#"><i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
                 <div class="task-detail">
                     <div class="row">
                         <div class="col-sm-3">
@@ -178,7 +190,13 @@
 
 <!-- Jquery -->
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<!-- JQuery-UI CDN -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 <!-- Common js file -->
 <script src="../../assets/js/common.js"></script>
+<script type="text/javascript">
+// Making the tasks draggable and sortable in tasks box.
+$(".tasks-box").sortable({connectWith: ".tasks-box"});
+</script>
 </body>
 </html>

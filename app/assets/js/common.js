@@ -29,12 +29,18 @@ $(document).ready(function(){
     })
 
     $(".task").click(function(){
-        $("#task-info").show(50)
+        $("#task-info").show()
     })
 
-    $("#arrow-rght").click(function(){
-        $("#task-info").hide(50)
+    $("#arrow-right").click(function(){
+        $("#task-info").hide()
     })
+   $("#recent-task").click(function(){
+       $("#task-list").toggle();
+   })
+   $("#recent-project").click(function(){
+    $("#project-list").toggle();
+})
 })
 
 function ajaxHandler(url,type,data)
