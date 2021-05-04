@@ -13,15 +13,16 @@
             <div class="new-pro">
                 <a class="new-project" data-toggle="modal" data-target="#projectForm" href="#"><i
                         class="fas fa-plus"></i></a>
-                <p>Create new project</p>
+                <p>Create New</p>
             </div>
             <?php foreach($projects as $project):?>
-            <div class="new-pro">
-                <a class="new-project" data-toggle="modal" href="project&id=<?=$project->getProjectId()?>">
-                    <i class="fas fa-project-diagram"></i>
-                </a>
-                <p><?=$project->getProjectName()?></p>
-            </div>
+
+                <div class="new-pro">
+                    <a class="new-project" href="project?id=<?=$project->getProjectId()?>">
+                        <i class="fas fa-project-diagram"></i>
+                    </a>
+                    <p><?=$project->getProjectName()?></p>
+                </div>
             <?php endforeach ?>
         </div>
     </div>
@@ -43,7 +44,6 @@
             </div>
             <form action="project" method="POST" class="general-form">
                 <div class="modal-body">
-
                     <label for="projectName">Project Name</label>
                     <input type="text" class="form-control" name="val[projectName]" value="" id="projectName"
                         placeholder="Eg. School">

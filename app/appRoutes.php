@@ -94,6 +94,7 @@ class appRoutes implements \Ninja\Routes {
 				],
 				'login' => true
 			]
+
 		];
 
 		return $routes;

@@ -43,10 +43,15 @@ class EntryPoint {
 			{
 				$output = json_encode($output);
 				header('Content-Type: application/json');
-				return $output;
+				echo $output;
+				return;
 			}	
 
-		
+			if(isset($page['error']))
+			{
+				die("An error occurred");
+			}
+	
 			if(!$authentication->isLoggedIn())
 			{
 				echo $output;

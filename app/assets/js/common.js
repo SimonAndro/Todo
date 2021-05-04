@@ -32,6 +32,15 @@ $(document).ready(function(){
     })
 })
 
+function notify(msg,type)
+{
+    iziToast.show({
+        position:"topRight",
+        title: type,
+        message: msg
+    });
+}
+
 function ajaxHandler(url,type,data)
 {
     $('#loading-overlay').show();
@@ -42,10 +51,22 @@ function ajaxHandler(url,type,data)
         success:function(result){
             $('#loading-overlay').hide(); 
             console.log(result);
+            if(result.msg == "success")
+            {
+                if(result.notify !== undefined)
+                {
+                    notify(result.notifMsg,result.notifMsgType);
+                }
+                if(result.action == "reload")
+                {
+                    location.reload();
+                }
+            }
 
         },
         error:function(result)
         {
+            
             $('#loading-overlay').hide(); 
             console.log(result);
         }
@@ -64,4 +85,5 @@ $(".general-form").on("submit",function(e){
     var type = "POST";
     var data = form.serialize();
     ajaxHandler(url,type,data);
+    
 });

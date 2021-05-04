@@ -59,7 +59,7 @@
       border: solid 1px #7e7c7c;
       text-align: center;
   }
-  .tasks-container .new-project .fa-plus{
+  .tasks-container .new-project .fas{
       font-size: 30px;
       color: #858585;
       margin-top: 35px;
@@ -119,4 +119,13 @@
   white-space: nowrap; 
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.project-list .new-pro{
+  float:left;
+  text-align:center;
+  margin-right:10px;
+}
+
+.project-list .new-pro p{
+   width: 100px;
 }

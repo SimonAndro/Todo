@@ -1,8 +1,15 @@
 <div class="project_view">
                 <div class="project-menu">
-                    <a href="#">Board</a> <a href="#">Dashboard</a>
-                    <hr>
+                    <div>
+                        <a href="#">Board</a> 
+                        <a href="#">Dashboard</a>
+                    </div>
+                    
+                    <div>
+                        <p class="pro-title"><?=$project->getProjectName()?></p>
+                    </div>
                 </div>
+                <hr>
                   <div class="task-container">
 
                        <!-- Todo tasks -->

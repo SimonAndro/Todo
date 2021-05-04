@@ -4,6 +4,7 @@ a{
 }
 .project-menu{
     display: flex;
+    justify-content:space-between;
     
 }
 .task-container{
@@ -53,3 +54,4 @@ a{
     border: solid 1px #eeeeee;
     box-shadow: 6px 6px 6px 6px #eeeeee;
 }
+

@@ -25,7 +25,7 @@ class Home {
 	public function index() {
 		$title = "Home";
 
-		$sql = "SELECT name FROM ".$this->projectsTable->getTableName()." WHERE owner_id=?";
+		$sql = "SELECT * FROM ".$this->projectsTable->getTableName()." WHERE owner_id=?";
 		$projects = $this->projectsTable->customQuery($sql,$this->user->getUserId());
 		$pageContent = loadTemplate("home/index",['projects'=>$projects]);
 		return [
