@@ -6,12 +6,14 @@ body {
  .login-layout
 {
     display: block;
+    width: 30%;
+    margin: 100px auto auto auto;
     height: 100%;
     background-color: #fff;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: -4px -4px 4px 4px #dadada;
 } 
-
 .login-layout h2{
     text-align: center;
     padding: 5px;
@@ -83,6 +85,20 @@ span.psw {
     .cancelbtn {
         width: 100%;
     }
+    .login-layout{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .login-layout{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .login-layout{
+        width: 95%;
+    }
 }
 .rem-reg
 {
@@ -104,51 +120,3 @@ a {
 .log-error{
     color:red;
  }
-
- /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-     .login-layout
-    {
-        width:100%;
-    } 
-} 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .login-layout
-    {
-        width:50%;
-        margin: 100px auto auto auto;
-        padding: 20px;
-    } 
-} 
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .login-layout
-    {
-        width:40%;
-        margin: 100px auto auto auto;
-        padding: 20px;
-    } 
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-      .login-layout
-    {
-        width:30%;
-        margin: 100px auto auto auto;
-        padding: 20px;
-    } 
-} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-     .login-layout
-    {
-        width:30%;
-        margin: 100px auto auto auto;
-        padding: 20px;
-    } 
-}

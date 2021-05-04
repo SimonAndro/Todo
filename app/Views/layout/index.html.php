@@ -39,17 +39,23 @@ dump_to_file($output);
 
                 <ul>
                     <li><a href="home"> <i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-align-right"></i> Board</a></li>
                 </ul>
             </div> <!-- Left side menu-->
 
             <div class="col-sm-10 right-side">
                 <!--  -->
-                <div class="home-head">
+                <div class="home-head row">
+                  <div class="col-sm-9">
                     <h2><?=$output['title']?></h2>
-                    <div class="user-info">
-                        <p class="user-icon"><?=$user->getUserEmail()?></p>
-                        <a class="btn btn-secondary" href="user-logout">Logout</a>
+                  </div>
+                    <div class="col-sm-3">
+                        <div class="user-info">
+                            <p class="user-icon"><?=$user->getUserEmail()?></p>
+                            <a class="logout-btn" href="user-logout">Logout</a>
+                        </div>
                     </div>
+                    
                 </div> <!-- Home head-->
                 <hr>
                 <div class="page-content">
