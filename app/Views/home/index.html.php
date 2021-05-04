@@ -1,6 +1,6 @@
 <div class="home-view">
     <div class="tasks-container">
-        <p id="recent-task"><a href="#"><i class="fas fa-th-list"></i>   Task due soon</a> </p>
+        <p id="recent-task"><a href="#"><i class="fas fa-th-list"></i> Task due soon</a> </p>
         <div class="task-list" id="task-list">
             <p>No task due in the next five days</p>
         </div>
@@ -8,37 +8,22 @@
     <!--Tasks container-->
 
     <div class="tasks-container">
-        <p id="due-soon"><a href="#"><i class="fas fa-arrow-circle-down"></i>Recent projects</a> </p>
-        <div class="project-list">
+        <p id="recent-project"><a href="#"><i class="fas fa-th-list"></i></i> Recent projects</a> </p>
+        <div class="project-list" id="project-list">
             <div class="new-pro">
-                <a class="new-project" data-toggle="modal" data-target="#projectForm" href="#"><i
+                <a class="new-project" data-toggle="modal" data-target="#projectForm" href="javascript:void(0);"><i
                         class="fas fa-plus"></i></a>
                 <p>Create New</p>
             </div>
             <?php foreach($projects as $project):?>
-
                 <div class="new-pro">
-                    <a class="new-project" href="project?id=<?=$project->getProjectId()?>">
+                    <a class="old-project" href="project?id=<?=$project->getProjectId()?>">
                         <i class="fas fa-project-diagram"></i>
                     </a>
                     <p><?=$project->getProjectName()?></p>
                 </div>
-        <p id="recent-project"><a href="#"><i class="fas fa-th-list"></i></i>   Recent projects</a> </p>
-        <div class="project-list" id="project-list">
-          <?php foreach($projects as $project):?>
-            <div class="new-pro">
-                <a class="new-project" data-toggle="modal" href="project&id=<?=$project->getProjectId()?>">
-                    <i class="fas fa-project-diagram"></i>
-                </a>
-                <p><?=$project->getProjectName()?></p>
-            </div>
             <?php endforeach ?>
-            <div class="new-pro">
-                <a class="new-project" data-toggle="modal" data-target="#projectForm" href="#"><i
-                        class="fas fa-plus"></i></a>
-                <p>Create new project</p>
-            </div>
-            
+
         </div>
     </div>
     <!--Tasks container-->
@@ -72,4 +57,3 @@
         </div>
     </div>
 </div> <!-- Modal -->
-

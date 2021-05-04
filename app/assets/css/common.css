@@ -52,7 +52,7 @@
       font-size: 20px;
       border-bottom: solid 1px #7e7c7c;
   }
-  .tasks-container .new-project{
+  .tasks-container .new-project,.old-project{
       display: block;
       width: 100px;
       height: 100px;
@@ -60,7 +60,7 @@
       border: dotted 2px #7e7c7c;
       text-align: center;
   }
-  .tasks-container .new-project .fas{
+  .tasks-container .new-project .fas,.old-project .fas{
       font-size: 30px;
       color: #858585;
       margin-top: 35px;
@@ -137,4 +137,7 @@
     margin-left: 10px;
     line-height: 35px;
     font-size: 20px;
+}
+.old-project{
+  border: 1px solid #ccc;
 }
