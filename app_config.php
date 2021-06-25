@@ -8,7 +8,7 @@ return array(
 
     'db_username' => 'root',
 
-    'db_name' => 'todo_task_manager_db',
+    'db_name' => 'todo_task_manager',
 
     'db_password' => '',
 
